@@ -16,8 +16,8 @@ npm install going-in-circles
 ```js
 const {bullseye} = require('going-in-circles');
 const center = {lat: 47.505, long: -100.99};
-const radius = 500;
-const numCircles = 4;
+const radius = 500; // radius in meters
+const numCircles = 4; // number of circles you want to divide the bullseye into
 
 const circles = bullseye({center, radius, numCircles});
 // circles is in the format:
@@ -59,3 +59,20 @@ for (const circle of circles) {
     }
 }
 ```
+
+## Local development
+
+1. git clone git@github.com:AnilRedshift/going-in-circles.git
+1. npm install
+1. export MAPBOX_API_TOKEN=YOUR_MAPBOX_TOKEN
+1. npm run dev
+
+You'll need a [mapbox api token](https://account.mapbox.com/access-tokens/) to see the underlying map. You need to export this as a shell variable before running the webserver.
+
+
+This opens up a webserver at localhost:5000, where you can play around with the code. See [demo.js](src/demo.js) for an example.
+
+## Publishing a new version
+1. bump the version in package.json
+2. npm run prod
+3. push to npm
