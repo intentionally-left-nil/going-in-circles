@@ -2,13 +2,14 @@
   "name": "going-in-circles",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "goingInCircles.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "dev": "npm-run-all --parallel start watch",
-    "start": "serve public"
+    "start": "serve public",
+    "prod": "rollup src/index.js --file goingInCircles.js --format cjs"
   },
   "repository": {
     "type": "git",
