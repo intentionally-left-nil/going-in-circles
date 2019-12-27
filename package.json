@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "dev": "npm-run-all --parallel start watch",
+    "start": "serve public"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,15 @@
   "bugs": {
     "url": "https://github.com/AnilRedshift/going-in-circles/issues"
   },
-  "homepage": "https://github.com/AnilRedshift/going-in-circles#readme"
+  "homepage": "https://github.com/AnilRedshift/going-in-circles#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.0",
+    "@rollup/plugin-node-resolve": "^6.0.0",
+    "@rollup/plugin-replace": "^2.3.0",
+    "leaflet": "^1.6.0",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^1.27.14",
+    "rollup-plugin-postcss": "^2.0.3",
+    "serve": "^11.2.0"
+  }
 }
