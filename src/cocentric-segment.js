@@ -1,7 +1,5 @@
 import getCoordinate from './get-coordinate';
-
-const NUMBER_OF_COORDINATES_IN_CIRCLE = 180;
-const RADIANS_BETWEEN_COORDINATES = (2 * Math.PI) / NUMBER_OF_COORDINATES_IN_CIRCLE;
+import { NUMBER_OF_COORDINATES_IN_CIRCLE, RADIANS_BETWEEN_COORDINATES } from './constants'
 
 export default function cocentricSegment({ center, innerRadius, outerRadius, startRadian, endRadian }) {
     let coordinates = [];
