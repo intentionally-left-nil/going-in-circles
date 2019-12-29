@@ -45,5 +45,7 @@ export default function cocentricSegment({
   coordinates.push(
     getCoordinate({ center, radius: innerRadius, radian: startRadian })
   );
+
+  // In order to follow the geoJSON spec, the first and last coordinate must match
   return [firstCoordinate, ...coordinates, firstCoordinate];
 }

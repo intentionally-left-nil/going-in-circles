@@ -11,5 +11,9 @@ export default function circle({ center, radius }) {
     const radian = i * RADIANS_BETWEEN_COORDINATES;
     coordinates.push(getCoordinate({ center, radius, radian }));
   }
-  return [firstCoordinate, ...coordinates, firstCoordinate];
+
+  // In order to follow the geoJSON spec, the first and last coordinate must match
+  // and it must follow the 'right-hand-rule'
+  // For the latter, we just reverse the coordinates to match the direction
+  return [firstCoordinate, ...coordinates, firstCoordinate].reverse();
 }
