@@ -69,7 +69,7 @@ for (const circle of circles) {
 
 ## Local development
 
-1. git clone git@github.com:AnilRedshift/going-in-circles.git
+1. git clone git@github.com:intentionally-left-nil/going-in-circles.git
 1. npm install
 1. export MAPBOX_API_TOKEN=YOUR_MAPBOX_TOKEN
 1. npm run dev
